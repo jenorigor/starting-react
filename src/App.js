@@ -37,7 +37,7 @@ function App() {
   } );
 
   useEffect( ( ) => {
-    fetch('http://localhost:3000/starting-react/pokemon.json')
+    fetch('https://jenorigor.github.io/starting-react/pokemon.json')
     .then( resp => resp.json( ) )
     .then((data) => dispatch({
       type: 'SET_POKEMON',
