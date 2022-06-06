@@ -30,9 +30,6 @@ const pokemonReducer = (state, action) => {
 };
 
 function App() {
-  const [filter,filterSet] = useState( '' );
-  const [selectedItem, selectItem] = useState( null );
-  const [pokemon, pokemonSet] = useState( [ ] );
   const [state,dispatch] = useReducer( pokemonReducer, {
     pokemon: [ ],
     filter: '',
@@ -53,12 +50,6 @@ function App() {
   return (
     <PokemonContext.Provider
     value={{
-      filter,
-      filterSet,
-      selectedItem,
-      selectItem,
-      pokemon,
-      pokemonSet,
       state,
       dispatch
     }}
